@@ -11,6 +11,8 @@ class BoardEdge {
         this.end = end;
         this.tiles = new ArrayList<>();
 
+        tiles.add(start);
+
         Tile prev = start;
         for (int i = 0; i < length-2; i++) {
             Tile t = new Tile();
@@ -20,6 +22,7 @@ class BoardEdge {
             prev = t;
         }
         prev.nextTiles.add(end);
+        tiles.add(end);
     }
 
     public Tile getEndTile(){
