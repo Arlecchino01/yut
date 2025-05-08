@@ -10,6 +10,8 @@ public class Board {
     public Board(int sides) {
         origin = createTile();
         Tile prev = origin;
+        
+        
 
         for (int i = 0; i < sides-1; i++) {
             Tile end = createTile();
@@ -24,6 +26,7 @@ public class Board {
 
         center = createTile();
         Tile centerTile = center;
+        centerTile.id = 5;
         
         //center로 가는 길 (origin + 마지막 변의 출발점 제외 -> N-2)
         for (int i = 0; i < sides-2; i++){
@@ -44,6 +47,7 @@ public class Board {
 
     private Tile createTile() {
         Tile t = new Tile();
+        t.id = 0;
         return t;
     }
 }
