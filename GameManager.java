@@ -13,24 +13,20 @@ public class GameManager {
         
         Scanner sc = new Scanner(System.in);
         playerNum = sc.nextInt();
-        sc.close();
+        sc.nextLine(); 
 
         for(int i = 0; i<playerNum; i++){
-
-
-            
 
             Player player = createPlayer();
 
             System.out.println("이름을 입력하세요: ");
-            Scanner sc1 = new Scanner(System.in);
-            String thisName = sc1.nextLine();
+            String thisName = sc.nextLine();
             player.name = thisName;
-            System.out.println(thisName);
+            System.out.println("플레이어: " + thisName + "추가 완료");
             //players.add(player);
             //String checkName = players.get(i).name;
             //System.out.println("플레이어"+ (i+1) + checkName + "님이 추가되었습니다.");
-            sc1.close();
+            
         }
 
 

@@ -23,11 +23,14 @@ class BoardEdge {
         }
         prev.nextTiles.add(end);
         tiles.add(end);
+        
     }
 
     public Tile getEndTile(){
         return end;
     }
+
+    
 
     
 }
