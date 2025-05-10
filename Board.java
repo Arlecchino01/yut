@@ -6,11 +6,12 @@ public class Board {
     Tile center;
     List<BoardEdge> diagonalsToCenter = new ArrayList<>();
     List<BoardEdge> diagonalsFromCenter = new ArrayList<>();
+    int indexFromCenterTo;
 
     public Board(int sides) {
         origin = createTile();
         Tile prev = origin;
-        
+        origin.isOrigin = true;
         
 
         for (int i = 0; i < sides-1; i++) {
@@ -36,11 +37,12 @@ public class Board {
         }
 
         //center에서 출발하는 길 (N/2)
+        indexFromCenterTo = (sides+1)/2;
         for (int i = 0; i < sides/2; i++){
-            int index = (sides+1)/2 +1 ;
-            Tile endTile = edges.get(index).getEndTile();            
+            Tile endTile = edges.get(indexFromCenterTo).getEndTile();            
             BoardEdge diagonalEdge = new BoardEdge(centerTile, endTile, 4);
             diagonalsFromCenter.add(diagonalEdge);
+            indexFromCenterTo++;
         }
 
     }
@@ -50,4 +52,25 @@ public class Board {
         t.id = 0;
         return t;
     }
+
+    public List<BoardEdge> getEdges() {
+        return edges;
+    }
+
+    public Tile getCenter(){
+        return center;
+    }
+
+    public List<BoardEdge> getDiagonalsToCenter() {
+        return diagonalsToCenter;
+    }
+
+    public List<BoardEdge> getDiagonalsFromCenter() {
+        return diagonalsFromCenter;
+    }
+
+    
+
+
+
 }

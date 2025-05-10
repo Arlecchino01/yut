@@ -30,7 +30,12 @@ class BoardEdge {
         return end;
     }
 
+    public List<Tile> getTiles() {
+        return tiles;
+    }
     
-
+    public Tile getStartTile(){
+        return start;
+    }
     
 }
