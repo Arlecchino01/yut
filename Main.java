@@ -5,11 +5,6 @@ import java.awt.event.ActionListener;
 
 public class Main {
     public static void main(String[] args) {
-        
-SwingUtilities.invokeLater(() -> {
-            new MainFrame(); // GUI 생성 시작
-        }); 
+        System.out.println("d");
     }
-    
 }
-    
