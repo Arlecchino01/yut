@@ -68,9 +68,4 @@ public class Board {
     public List<BoardEdge> getDiagonalsFromCenter() {
         return diagonalsFromCenter;
     }
-
-    
-
-
-
 }

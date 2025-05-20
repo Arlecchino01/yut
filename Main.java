@@ -6,5 +6,6 @@ import java.awt.event.ActionListener;
 public class Main {
     public static void main(String[] args) {
         System.out.println("d");
+        UI a = new UI();
     }
 }
